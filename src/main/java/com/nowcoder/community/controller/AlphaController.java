@@ -70,9 +70,9 @@ public class AlphaController {
     }
 
     // /student/123
-    @RequestMapping(path = "/student/{id}",method = RequestMethod.GET)
+    @RequestMapping(path = "/student/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public String getStudent(@PathVariable("id") int id){
+    public String getStudent(@PathVariable("id") int id) {
         System.out.println(id);
         return "a student";
     }

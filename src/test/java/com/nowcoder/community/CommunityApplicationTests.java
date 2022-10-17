@@ -2,7 +2,8 @@ package com.nowcoder.community;
 
 import com.nowcoder.community.dao.AlphaDao;
 import com.nowcoder.community.service.AlphaService;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -15,7 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
+@RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration(classes = CommunityApplication.class)
 public class CommunityApplicationTests implements ApplicationContextAware {
