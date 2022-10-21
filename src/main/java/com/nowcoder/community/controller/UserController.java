@@ -1,5 +1,6 @@
 package com.nowcoder.community.controller;
 
+import com.nowcoder.community.annotation.LoginRequired;
 import com.nowcoder.community.entity.User;
 import com.nowcoder.community.service.UserService;
 import com.nowcoder.community.util.CommunityUtil;
@@ -43,11 +44,13 @@ public class UserController {
 
 
 
+    @LoginRequired
     @RequestMapping(path = "/setting", method = RequestMethod.GET)
     public String getSettingPage(){
         return "/site/setting";
     }
 
+    @LoginRequired
     @RequestMapping(path = "/upload",method = RequestMethod.POST)
     public String uploadHeader(MultipartFile headerImager, Model model){
         if(headerImager == null){
@@ -108,6 +111,7 @@ public class UserController {
 
     }
 
+    @LoginRequired
     @RequestMapping(path = "/resetPassword", method = RequestMethod.POST)
     public String resetPassword(String originalPassword, String newPassword,Model model){
         model.addAttribute("originalMsg",originalPassword);
