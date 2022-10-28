@@ -22,7 +22,7 @@ public class JavaTest {
             fis = new FileInputStream(src);
             fos = new FileOutputStream(dec);
             while ((temp = fis.read(buffer)) != -1){
-                fos.write(bu)
+                fos.write(buffer);
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
