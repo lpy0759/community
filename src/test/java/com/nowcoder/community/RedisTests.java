@@ -138,6 +138,7 @@ public class RedisTests {
             redisTemplate.opsForHyperLogLog().add(redisKey, r);
         }
 
+
         long size = redisTemplate.opsForHyperLogLog().size(redisKey);
         System.out.println(size);
     }
@@ -234,6 +235,12 @@ public class RedisTests {
         System.out.println(redisTemplate.opsForValue().getBit(redisKey, 6));
 
 
+    }
+
+    @Test
+    public void testHyperLogLogDelete() {
+        String rediKey = "uv:20221104:20221104";
+        redisTemplate.opsForHyperLogLog().delete(rediKey);
     }
 
 
