@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.logging.SimpleFormatter;
 
 @Component
-@Aspect
+//@Aspect
 public class ServiceLogAspect {
     private static final Logger logger = LoggerFactory.getLogger(ServiceLogAspect.class);
 
